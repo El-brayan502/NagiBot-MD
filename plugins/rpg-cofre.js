@@ -1,71 +1,75 @@
 //codigos creado por 🐉𝙉𝙚𝙤𝙏𝙤𝙠𝙮𝙤 𝘽𝙚𝙖𝙩𝙨🐲 para Nagi Bot 
 
-const handler = async (m, { conn }) => {
-  const userId = m.sender;
-  const isOwner = [ // Lista de owners
-    '573001533523@s.whatsapp.net', // Brayan
-    '50248019799@s.whatsapp.net',  // Tú
-  ].includes(userId);
+const handler = async (m, { isPrems, conn }) => {
+  const ownerJids = [
+    '50248019799@s.whatsapp.net', // Tu número
+    '573001533523@s.whatsapp.net' // Brayan (creador del bot)
+  ];
 
-  if (!global.db.data.users[userId]) {
-    throw `❌ No estás registrado aún en el sistema. Usa *#reg nombre.edad* para comenzar.`;
+  if (!global.db.data.users[m.sender]) {
+    throw `⚠️ Usuario no encontrado.`;
   }
 
-  const user = global.db.data.users[userId];
-  const ahora = Date.now();
-  const esperaFija = 23 * 60 * 60 * 1000 + 59 * 60 * 1000; // 23h 59min
-  const tiempoUltimo = user.lastcofre || 0;
+  const user = global.db.data.users[m.sender];
+  const now = Date.now();
+  const cooldown = 86400000; // 24 horas
+  const last = user.lastcofre || 0;
 
-  if (!isOwner && ahora - tiempoUltimo < esperaFija) {
-    const tiempoRestante = esperaFija - (ahora - tiempoUltimo);
-    const mensajeEspera = `🐈 Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(tiempoRestante)}* para volver a reclamar.`;
-    return await conn.reply(m.chat, mensajeEspera, m);
+  // Si NO es owner, aplicar cooldown
+  if (!ownerJids.includes(m.sender) && (now - last < cooldown)) {
+    const restante = cooldown - (now - last);
+    return conn.sendMessage(m.chat, {
+      text: `✨️ Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(restante)}* para volver a reclamar.`,
+      quoted: m
+    });
   }
 
-  const coins = getRandom(100, 300);
-  const tokens = getRandom(1, 15);
-  const diamantes = getRandom(5, 50);
-  const exp = getRandom(300, 9000);
+  // Recompensas aleatorias
+  const img = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745557947304.jpeg';
+  const yenes = Math.floor(Math.random() * 30);
+  const tokens = Math.floor(Math.random() * 10);
+  const coins = Math.floor(Math.random() * 4000);
+  const exp = Math.floor(Math.random() * 5000);
 
-  user.coin += coins;
-  user.joincount += tokens;
-  user.diamonds += diamantes;
-  user.exp += exp;
-  if (!isOwner) user.lastcofre = ahora;
+  user.dragones = (user.dragones || 0) + yenes;
+  user.money = (user.money || 0) + coins;
+  user.joincount = (user.joincount || 0) + tokens;
+  user.exp = (user.exp || 0) + exp;
+  user.lastcofre = now;
 
-  const mensaje = `
-╭━〔 🧧 Cσϝɾҽ Aʅҽαƚσɾισ 〕━⬣
-┃📦 *¡Cofre abierto con éxito!*
-┃✨ ¡Premios reclamados!  
+  const texto = `
+╭━〔 ${global.botname} 〕⬣
+┃🧰 *Obtienes Un Cofre* 🎁
+┃ ¡Felicidades!
 ╰━━━━━━━━━━━━⬣
 
-💸 *Monedas:* ${coins}
-⚜️ *Tokens:* ${tokens}
-💎 *Diamantes:* ${diamantes}
-📈 *EXP:* ${exp}
+*💴 ${yenes} yenes*
+*⚜️ ${tokens} Tokens*
+*🪙 ${coins} Coins*
+*✨ ${exp} Exp*`;
 
-${isOwner ? '👑 Eres owner, puedes reclamar sin límites.' : '🔄 Disponible nuevamente en *23h 59min*'}
-`;
-
-  const imagen = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745557947304.jpeg';
-  await conn.sendFile(m.chat, imagen, 'cofre.jpg', mensaje, m);
+  try {
+    await conn.sendMessage(m.chat, {
+      image: { url: img },
+      caption: texto
+    }, { quoted: m });
+  } catch (e) {
+    console.error('❌ Error al enviar imagen:', e);
+    throw '⚠️ Ocurrió un error al enviar el cofre.';
+  }
 };
 
 handler.help = ['cofre'];
 handler.tags = ['rpg'];
 handler.command = ['cofre'];
-handler.group = true;
+handler.level = 5;
+handler.group = false;
 handler.register = true;
 
 export default handler;
 
-// Funciones auxiliares
-function msToTime(ms) {
-  const h = Math.floor(ms / 3600000);
-  const m = Math.floor((ms % 3600000) / 60000);
-  return `${h} Horas ${m} Minutos`;
-}
-
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function msToTime(duration) {
+  const hours = Math.floor(duration / 3600000);
+  const minutes = Math.floor((duration % 3600000) / 60000);
+  return `${hours} Horas ${minutes} Minutos`;
 }
