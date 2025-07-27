@@ -295,6 +295,194 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ┃☆ ${usedPrefix}tiktokimg <url>  
 ┗━━━━━━━━━━━━━━━━━⪩
 
+┏━━⪩「 ᴅʟ 」⪨
+┃☆ ${usedPrefix}pinterest  
+┃☆ ${usedPrefix}tiktokmp3 <url>  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 +18 」⪨
+┃☆ ${usedPrefix}pornhubsearch  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴛʀᴀɴꜱꜰᴏʀᴍᴀᴅᴏʀ 」⪨
+┃☆ ${usedPrefix}tourl2  
+┃☆ ${usedPrefix}togifaud  
+┃☆ ${usedPrefix}tovideo  
+┃☆ ${usedPrefix}tts <lang> <texto>  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 」⪨
+┃☆ ${usedPrefix}spotify  
+┃☆ ${usedPrefix}music  
+┃☆ ${usedPrefix}tiktokdl <url>  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ɢᴀᴍᴇ 」⪨
+┃☆ ${usedPrefix}ahorcado  
+┃☆ ${usedPrefix}delttt  
+┃☆ ${usedPrefix}math <modo>  
+┃☆ ${usedPrefix}sopa  
+┃☆ ${usedPrefix}buscarpalabras  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ɢᴀᴍᴇꜱ 」⪨
+┃☆ ${usedPrefix}ppt  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ɢʀᴜᴘᴏ 」⪨
+┃☆ ${usedPrefix}admins <texto>  
+┃☆ ${usedPrefix}group open / close  
+┃☆ ${usedPrefix}grupo abrir / cerrar  
+┃☆ ${usedPrefix}delete  
+┃☆ ${usedPrefix}demote  
+┃☆ ${usedPrefix}encuesta <texto|opción>  
+┃☆ ${usedPrefix}groupdesc <texto>  
+┃☆ ${usedPrefix}gruponame <texto>  
+┃☆ ${usedPrefix}hidetag  
+┃☆ ${usedPrefix}infogrupo  
+┃☆ ${usedPrefix}kick  
+┃☆ ${usedPrefix}link  
+┃☆ ${usedPrefix}listadv  
+┃☆ ${usedPrefix}promote  
+┃☆ ${usedPrefix}revoke  
+┃☆ ${usedPrefix}bot  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴏᴡɴᴇʀ 」⪨
+┃☆ ${usedPrefix}listonline  
+┃☆ ${usedPrefix}addcoins @usuario  
+┃☆ ${usedPrefix}addprem  
+┃☆ ${usedPrefix}delprem  
+┃☆ ${usedPrefix}autoadmin  
+┃☆ ${usedPrefix}copia  
+┃☆ ${usedPrefix}broadcastgroup  
+┃☆ ${usedPrefix}bcgc  
+┃☆ ${usedPrefix}chetar @usuario  
+┃☆ ${usedPrefix}chetar <número>  
+┃☆ ${usedPrefix}cleanfiles  
+┃☆ ${usedPrefix}cleartmp  
+┃☆ ${usedPrefix}deletefile  
+┃☆ ${usedPrefix}deschetar @usuario  
+┃☆ ${usedPrefix}deschetar <número>  
+┃☆ ${usedPrefix}dsowner  
+┃☆ >  
+┃☆ =>  
+┃☆ $  
+┃☆ ${usedPrefix}getplugin  
+┃☆ ${usedPrefix}groups  
+┃☆ ${usedPrefix}grouplist  
+┃☆ ${usedPrefix}invite  
+┃☆ ${usedPrefix}prefix [prefijo]  
+┃☆ ${usedPrefix}quitarcoin @usuario  
+┃☆ ${usedPrefix}quitarcoin all  
+┃☆ ${usedPrefix}quitarxp @usuario  
+┃☆ ${usedPrefix}resetprefix  
+┃☆ ${usedPrefix}restart  
+┃☆ ${usedPrefix}reunion  
+┃☆ ${usedPrefix}meeting  
+┃☆ ${usedPrefix}savefile ruta/nombre  
+┃☆ ${usedPrefix}saveplugin  
+┃☆ ${usedPrefix}setcmd <texto>  
+┃☆ ${usedPrefix}setimage  
+┃☆ ${usedPrefix}setstatus <texto>  
+┃☆ ${usedPrefix}spam2  
+┃☆ ${usedPrefix}update  
+┃☆ ${usedPrefix}actualizar  
+┃☆ ${usedPrefix}codigo <coins>  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ɪɴꜰᴏ 」⪨
+┃☆ ${usedPrefix}editautoresponder  
+┃☆ ${usedPrefix}owner  
+┃☆ ${usedPrefix}dash  
+┃☆ ${usedPrefix}dashboard  
+┃☆ ${usedPrefix}views  
+┃☆ ${usedPrefix}database  
+┃☆ ${usedPrefix}usuarios  
+┃☆ ${usedPrefix}user  
+┃☆ ${usedPrefix}ds  
+┃☆ ${usedPrefix}fixmsgespera  
+┃☆ ${usedPrefix}estado  
+┃☆ ${usedPrefix}grupos  
+┃☆ ${usedPrefix}newcommand  
+┃☆ ${usedPrefix}ping  
+┃☆ ${usedPrefix}reportar  
+┃☆ ${usedPrefix}sistema  
+┃☆ ${usedPrefix}speed  
+┃☆ ${usedPrefix}speedtest  
+┃☆ ${usedPrefix}horario  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴍᴏᴅꜱ 」⪨
+┃☆ ${usedPrefix}banuser @usuario razón  
+┃☆ ${usedPrefix}grupocrear <nombre>  
+┃☆ ${usedPrefix}unbanuser @usuario  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ʀɢ 」⪨
+┃☆ ${usedPrefix}confesar <número>  
+┃☆ ${usedPrefix}delbirth  
+┃☆ ${usedPrefix}deldescription  
+┃☆ ${usedPrefix}delgenre  
+┃☆ ${usedPrefix}marry @usuario  
+┃☆ ${usedPrefix}divorce  
+┃☆ ${usedPrefix}profile  
+┃☆ ${usedPrefix}respuesta <id mensaje>  
+┃☆ ${usedPrefix}premium  
+┃☆ ${usedPrefix}setdescription  
+┃☆ ${usedPrefix}setgenre  
+┃☆ ${usedPrefix}unreg  
+┃☆ ${usedPrefix}reg  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ʀᴘɢ 」⪨
+┃☆ ${usedPrefix}lb  
+┃☆ ${usedPrefix}levelup  
+┃☆ ${usedPrefix}lvl @usuario  
+┃☆ ${usedPrefix}aventura  
+┃☆ ${usedPrefix}adventure  
+┃☆ ${usedPrefix}baltop  
+┃☆ ${usedPrefix}bal  
+┃☆ ${usedPrefix}berburu  
+┃☆ ${usedPrefix}cofre  
+┃☆ ${usedPrefix}daily  
+┃☆ ${usedPrefix}claim  
+┃☆ ${usedPrefix}depositar  
+┃☆ ${usedPrefix}explorar  
+┃☆ ${usedPrefix}gremio  
+┃☆ ${usedPrefix}halloween  
+┃☆ ${usedPrefix}heal  
+┃☆ ${usedPrefix}inventario  
+┃☆ ${usedPrefix}inv  
+┃☆ ${usedPrefix}monthly  
+┃☆ ${usedPrefix}navidad  
+┃☆ ${usedPrefix}christmas  
+┃☆ ${usedPrefix}retirar  
+┃☆ ${usedPrefix}rob  
+┃☆ ${usedPrefix}slut  
+┃☆ ${usedPrefix}pay  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴇᴄᴏɴᴏᴍɪᴀ 」⪨
+┃☆ ${usedPrefix}canjear <código>  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴇᴄᴏɴᴏᴍʏ 」⪨
+┃☆ ${usedPrefix}wallet  
+┃☆ ${usedPrefix}apostar <cantidad>  
+┃☆ ${usedPrefix}cf  
+┃☆ ${usedPrefix}crimen  
+┃☆ ${usedPrefix}minar  
+┃☆ ${usedPrefix}rob  
+┃☆ ${usedPrefix}ruleta <cantidad> <color>  
+┃☆ ${usedPrefix}buy  
+┃☆ ${usedPrefix}buyall  
+┃☆ ${usedPrefix}trabajar  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ꜱᴛɪᴄᴋᴇʀ 」⪨
+┃☆ ${usedPrefix}brat <texto>  
+┃☆ ${usedPrefix}emojimix 😎+🥶  
+┃☆ ${usedPrefix}pfp @usuario  
+┃☆ ${usedPrefix}qc  
+┃☆ ${usedPrefix}stiker <imagen>  
+┃☆ ${usedPrefix}sticker <url>  
+┃☆ ${usedPrefix}toimg  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ʜᴇʀʀᴀᴍɪᴇɴᴛᴀꜱ 」⪨
+┃☆ ${usedPrefix}clima <ciudad>  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ɪᴍᴀɢᴇɴ 」⪨
+┃☆ ${usedPrefix}hd  
+┗━━━━━━━━━━━━━━━━━⪩
+
+> NAGI 2020 & 2025
   `.trim()
 
     // Unir header + body
