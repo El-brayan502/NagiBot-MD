@@ -48,7 +48,7 @@ global.nagiJadibts = true
 
 global.packname = '╭───═「 Brayan XD 」═───╮\n│◉ BOT:    NáɢɪBᴏᴛ-MD\n│◉ Brayan XD\n│◉ By: Brayan XD BOT⭐\n╰────────═┅═───────╯'
 global.botname = 'N A G I - A I'
-global.wm = '© ᗷᖇᗩYᗩᑎ ᑕᖇᗴᗩᗪOᖇ'
+global.wm = '© Brayan & NagiBot (≧∇≦)/'
 global.wm3 = '⫹⫺  ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ'
 global.author = 'Made By DevBrayan'
 global.dev = '© 𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 𝙱𝚛𝚊𝚢𝚊𝚗'
@@ -67,7 +67,7 @@ global.namabot = '⫹⫺  ᴍᴅ'
 global.v = '-'   
 global.eror = "_ubo un error _"
 global.lopr = "🅟"
-global.lolm = "Ⓛ"
+glombal.lolm = "Ⓛ"
 global.dmenut = "✦ ───『"
 global.dmenub = "│➭" 
 global.dmenub2 = "│乂"
