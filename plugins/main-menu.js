@@ -6,7 +6,7 @@ import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
   try {
-    await m.react('✅️')
+    await m.react('⚽️')
 
     let { exp, bank, registered } = global.db.data.users[m.sender]
     let name = await conn.getName(m.sender)
@@ -25,9 +25,9 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
     let pais = phone.getRegionCode() || 'Desconocido 🌐'
 
     const vids = [
-        'https://files.cloudkuimages.guru/videos/Sjqt6wIx.mp4',
-      'https://files.cloudkuimages.guru/videos/Sjqt6wIx.mp4',
-      'https://files.cloudkuimages.guru/videos/Sjqt6wIx.mp4'
+        'https://n.uguu.se/hyMwbxeR.mp4',
+      'https://n.uguu.se/hyMwbxeR.mp4',
+      'https://n.uguu.se/hyMwbxeR.mp4'
     ]
     let videoUrl = vids[Math.floor(Math.random() * vids.length)]
 
@@ -73,14 +73,14 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
     }
 
     const body = `
-  [ 𝗢 𝗪 𝗡 𝗘 𝗥 - U S E R ] 
+  [ 𝗢 𝗪 𝗡 𝗘 𝗥 - U S E R ]
 > 𖥔 ︳*Hola: ${taguser}*
 > 𖥔 ︳*ɴɪᴠᴇʟ: %level*
 > 𖥔 ︳ *ᴇxᴘ: %exp*
 > 𖥔 ︳ *ᴇɴ ᴇsᴛᴇ ᴄʜᴀᴛ: ${groupUserCount}*
 > 𖥔 ︳ *ʀᴇɢɪsᴛʀᴀᴅᴏ: ${registered ? '✅' : '❌'}*
 
- `[ 𝗜 𝗡 𝗙 𝗢 - 𝗕 𝗢 𝗧 ]`=
+ [ 𝗜 𝗡 𝗙 𝗢 - 𝗕 𝗢 𝗧 ]=
 > ║◦ɴᴏᴍʙʀᴇ ᴅᴇʟ ʙᴏᴛ: *ɴᴀɢɪ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ*  
 > ║◦ʀᴜɴᴛɪᴍᴇ: *${uptime}*
 > ║◦ᴏᴡɴᴇʀ: *ʙʀᴀʏᴀɴ*  
@@ -90,7 +90,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
 *【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】*
 
-╭──── `ᴍᴇɴᴜ ᴘʀɪɴᴄɪᴘᴀʟ` ────╮  
+╭──── *ᴍᴇɴᴜ ᴘʀɪɴᴄɪᴘᴀʟ* ────╮  
 ├ ${usedPrefix}afk [alasan] 
 ├ ${usedPrefix}menu  
 ├ ${usedPrefix}runtime  
@@ -99,7 +99,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}hd  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ɪɴғᴏ` ────╮  
+╭──── *ɪɴғᴏ* ────╮  
 ├ ${usedPrefix}editautoresponder  
 ├ ${usedPrefix}owner  
 ├ ${usedPrefix}dash  
@@ -121,14 +121,14 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}horario  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ɢʀᴜᴘᴏ 2` ────╮  
+╭──── *ɢʀᴜᴘᴏ 2* ────╮  
 ├ ${usedPrefix}lid  
 ├ ${usedPrefix}invite *<521>*  
 ├ ${usedPrefix}setemoji *<emoji>*  
 ├ ${usedPrefix}todos *<mensaje opcional>*  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴊáᴅɪʙᴏᴛ` ────╮  
+╭──── *ᴊáᴅɪʙᴏᴛ* ────╮  
 ├ ${usedPrefix}qr  
 ├ ${usedPrefix}code  
 ├ ${usedPrefix}token  
@@ -137,7 +137,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}pausarai  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ғᴜɴ` ────╮  
+╭──── *ғᴜɴ* ────╮  
 ├ ${usedPrefix}simi  
 ├ ${usedPrefix}bot  
 ├ ${usedPrefix}amistad  
@@ -177,28 +177,28 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}letra *<texto>*  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴅʟ` ────╮  
+╭──── *ᴅʟ* ────╮  
 ├ ${usedPrefix}pinterest  
 ├ ${usedPrefix}tiktokmp3 <url>  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `+18` ────╮  
+╭──── *+18* ────╮  
 ├ ${usedPrefix}pornhubsearch  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴛʀᴀɴsғᴏʀᴍᴀᴅᴏʀ` ────╮  
+╭──── *ᴛʀᴀɴsғᴏʀᴍᴀᴅᴏʀ* ────╮  
 ├ ${usedPrefix}tourl2  
 ├ ${usedPrefix}togifaud  
 ├ ${usedPrefix}tovideo  
 ├ ${usedPrefix}tts <lang> <texto>  
 ┗━━━━━━━━━━━━━━━━━⪩
-╭──── `ᴅᴏᴡɴʟᴏᴀᴅᴇʀ` ────╮  
+╭──── *ᴅᴏᴡɴʟᴏᴀᴅᴇʀ* ────╮  
 ├ ${usedPrefix}spotify  
 ├ ${usedPrefix}music  
 ├ ${usedPrefix}tiktokdl <url>  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ɢᴀᴍᴇ` ────╮  
+╭──── *ɢᴀᴍᴇ* ────╮  
 ├ ${usedPrefix}ahorcado  
 ├ ${usedPrefix}ppt  
 ├ ${usedPrefix}delttt  
@@ -207,7 +207,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}buscarpalabras  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴍᴇᴍᴜ ɢʀᴜᴘᴏ` ────╮  
+╭──── *ᴍᴇᴍᴜ ɢʀᴜᴘᴏ* ────╮  
 ├ ${usedPrefix}admins <texto>  
 ├ ${usedPrefix}group open / close  
 ├ ${usedPrefix}grupo abrir / cerrar  
@@ -226,7 +226,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}bot  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴏᴡɴᴇʀ` ────╮  
+╭──── *ᴏᴡɴᴇʀ* ────╮  
 ├ ${usedPrefix}listonline  
 ├ ${usedPrefix}addcoins @usuario  
 ├ ${usedPrefix}addprem  
@@ -269,13 +269,13 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}codigo <coins>  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴍᴏᴅs` ────╮  
+╭──── *ᴍᴏᴅs* ────╮  
 ├ ${usedPrefix}banuser @usuario razón  
 ├ ${usedPrefix}grupocrear <nombre>  
 ├ ${usedPrefix}unbanuser @usuario  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ʀɢ` ────╮  
+╭──── *ʀɢ* ────╮  
 ├ ${usedPrefix}confesar <número>  
 ├ ${usedPrefix}delbirth  
 ├ ${usedPrefix}deldescription  
@@ -291,7 +291,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}reg  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ʀɢᴘ` ────╮  
+╭──── *ʀɢᴘ* ────╮  
 ├ ${usedPrefix}lb  
 ├ ${usedPrefix}levelup  
 ├ ${usedPrefix}lvl @usuario  
@@ -319,11 +319,11 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}pay  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴇᴄᴏɴᴏᴍɪᴀ` ────╮  
+╭──── *ᴇᴄᴏɴᴏᴍɪᴀ* ────╮  
 ├ ${usedPrefix}canjear <código>  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `ᴇᴄᴏɴᴏᴍʏ` ────╮  
+╭──── *ᴇᴄᴏɴᴏᴍʏ* ────╮  
 ├ ${usedPrefix}wallet  
 ├ ${usedPrefix}apostar <cantidad>  
 ├ ${usedPrefix}cf  
@@ -336,7 +336,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ├ ${usedPrefix}trabajar  
 ╰─❒━━━━━━━━━━━❒─╯ 
 
-╭──── `sᴛɪᴄᴋᴇʀ` ────╮  
+╭──── *sᴛɪᴄᴋᴇʀ* ────╮  
 ├ ${usedPrefix}brat <texto>  
 ├ ${usedPrefix}emojimix 😎+🥶  
 ├ ${usedPrefix}pfp @usuario  
