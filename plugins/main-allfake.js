@@ -60,10 +60,10 @@ global.emoji4 = '⚽️'
 global.emoji5 = '✨️'
 global.emojis = [emoji, emoji2, emoji3, emoji4].getRandom()
 
-global.wait = '❍ Espera un momento, soy lenta...';
-global.waitt = '❍ Espera un momento, soy lenta...';
-global.waittt = '❍ Espera un momento, soy lenta...';
-global.waitttt = '❍ Espera un momento, soy lenta...';
+global.wait = '❍ Espera un momento, soy lento...';
+global.waitt = '❍ Espera un momento, soy lento...';
+global.waittt = '❍ Espera un momento, soy lento...';
+global.waitttt = '❍ Espera un momento, soy lento...';
 
 var canal = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'  
 var comunidad = 'https://chat.whatsapp.com/I0dMp2fEle7L6RaWBmwlAa'
