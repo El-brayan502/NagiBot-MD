@@ -25,9 +25,9 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
     let pais = phone.getRegionCode() || 'Desconocido 🌐'
 
     const vids = [
-        'https://n.uguu.se/hyMwbxeR.mp4',
-      'https://n.uguu.se/hyMwbxeR.mp4',
-      'https://n.uguu.se/hyMwbxeR.mp4'
+        'https://files.cloudkuimages.guru/videos/Sjqt6wIx.mp4',
+      'https://files.cloudkuimages.guru/videos/Sjqt6wIx.mp4',
+      'https://files.cloudkuimages.guru/videos/Sjqt6wIx.mp4'
     ]
     let videoUrl = vids[Math.floor(Math.random() * vids.length)]
 
