@@ -1,46 +1,102 @@
-import uploadFile from '../lib/uploadFile.js'
-import uploadImage from '../lib/uploadImage.js'
-import fetch from 'node-fetch'
+//▪CÓDIGO BY DEVBRAYAN PRROS XD▪
+//▪ROXY BOT MD▪
 
-let handler = async (m) => {
-  let q = m.quoted ? m.quoted : m
-  let mime = (q.msg || q).mimetype || ''
-  if (!mime) return conn.reply(m.chat, `${emoji} Por favor, responda a una *Imagen* o *Vídeo.*`, m)
-  await m.react(rwait)
+import { writeFile, unlink, readFile } from 'fs/promises'
+import { join } from 'path'
+import { fileTypeFromBuffer } from 'file-type'
+
+let handler = async (m, { conn }) => {
+  await conn.sendMessage(m.chat, { react: { text: '☁️', key: m.key } })
+
   try {
-  let media = await q.download()
-  let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
-  let link = await (isTele ? uploadImage : uploadFile)(media)
-  let img = await (await fetch(`${link}`)).buffer()
-  let txt = `乂  *L I N K - E N L A C E*  乂\n\n`
-      txt += `*» Enlace* : ${link}\n`
-      txt += `*» Acortado* : ${await shortUrl(link)}\n`
-      txt += `*» Tamaño* : ${formatBytes(media.length)}\n`
-      txt += `*» Expiración* : ${isTele ? 'No expira' : 'Desconocido'}\n\n`
-      txt += `> *${dev}*`
+    const q = m.quoted ? m.quoted : m
+    const mime = (q.msg || q).mimetype || ''
+    if (!mime) return m.reply('🌧️ *Responde a un archivo o media para subirlo.*')
 
-await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, fkontak)
-await m.react(done)
-} catch {
-await m.react(error)
-}}
+    const media = await q.download()
+    if (!media) return m.reply('⛅ *Error al descargar el archivo.*')
+
+    const uploads = []
+
+    const up1 = await uploaderCloudStack(media).catch(() => null)
+    if (up1) uploads.push({ name: '☁️ CloudStack', url: up1 })
+
+    const up2 = await uploaderCloudGuru(media).catch(() => null)
+    if (up2) uploads.push({ name: '🌀 CloudGuru', url: up2 })
+
+    const up3 = await uploaderCloudCom(media).catch(() => null)
+    if (up3) uploads.push({ name: '🌐 CloudImages', url: up3 })
+
+    if (uploads.length === 0) throw '⛈️ *No se pudo subir a ningún servidor. Intenta de nuevo más tarde.*'
+
+    let texto = `☁️ *Resultado de la Subida*\n*━━━━━━━━━━━━━━━━━━━━*\n\n`
+    for (const up of uploads) {
+      texto += `*${up.name}*\n🔗 ${up.url}\n\n`
+    }
+
+    await conn.sendMessage(m.chat, {
+      text: texto.trim(),
+      contextInfo: {
+        externalAdReply: {
+          title: 'Uploader Tools ☁️',
+          body: 'Enlaces generados desde servidores externos',
+          thumbnailUrl: uploads[0]?.url,
+          mediaType: 1,
+          renderLargerThumbnail: true
+        }
+      }
+    }, { quoted: m })
+
+  } catch (e) {
+    await conn.sendMessage(m.chat, {
+      text: typeof e === 'string' ? e : '⛈️ *Ocurrió un error inesperado durante la subida.*',
+      quoted: m
+    })
+  } finally {
+    await conn.sendMessage(m.chat, { react: { text: '', key: m.key } })
+  }
+}
+
 handler.help = ['tourl']
-handler.tags = ['transformador']
+handler.tags = ['tools']
+handler.command = ['tóurl', 'url', 'tourl']
+handler.limit = true
 handler.register = true
-handler.command = ['tourl', 'upload']
 
 export default handler
 
-function formatBytes(bytes) {
-  if (bytes === 0) {
-    return '0 B';
+// Función genérica para subir el buffer a un servidor
+async function uploadTo(url, buffer) {
+  const { ext, mime } = await fileTypeFromBuffer(buffer) || {}
+  if (!ext || !mime) throw new Error('Formato de archivo no reconocido.')
+
+  const tempPath = join('./tmp', `upload.${ext}`)
+  await writeFile(tempPath, buffer)
+  const fileData = await readFile(tempPath)
+
+  const form = new FormData()
+  form.append('file', new File([fileData], `upload.${ext}`, { type: mime }))
+
+  try {
+    const res = await fetch(url, { method: 'POST', body: form })
+    const json = await res.json()
+    await unlink(tempPath).catch(() => null)
+
+    if (json?.status !== 'success' || !json?.data?.url) throw new Error('Error al subir el archivo.')
+    return json.data.url
+  } catch (err) {
+    console.error(`Error subiendo a (${url}):`, err)
+    await unlink(tempPath).catch(() => null)
+    return null
   }
-  const sizes = ['B', 'KB', 'MB', 'GB', 'TB']
-  const i = Math.floor(Math.log(bytes) / Math.log(1024))
-  return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`;
 }
 
-async function shortUrl(url) {
-        let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
-        return await res.text()
-}
+// URLs de los servicios de subida
+const uploaderCloudStack = buffer =>
+  uploadTo('https://phpstack-1487948-5667813.cloudwaysapps.com/upload.php', buffer)
+
+const uploaderCloudGuru = buffer =>
+  uploadTo('https://cloudkuimages.guru/upload.php', buffer)
+
+const uploaderCloudCom = buffer =>
+  uploadTo('https://cloudkuimages.com/upload.php', buffer)
