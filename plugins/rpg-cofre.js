@@ -18,7 +18,7 @@ const handler = async (m, { conn }) => {
 
   if (!isOwner && ahora - tiempoUltimo < esperaFija) {
     const tiempoRestante = esperaFija - (ahora - tiempoUltimo);
-    const mensajeEspera = `✨️ Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(tiempoRestante)}* para volver a reclamar.`;
+    const mensajeEspera = `🐈 Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(tiempoRestante)}* para volver a reclamar.`;
     return await conn.reply(m.chat, mensajeEspera, m);
   }
 
