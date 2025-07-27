@@ -1,10 +1,6 @@
 //codigos creado por 🐉𝙉𝙚𝙤𝙏𝙤𝙠𝙮𝙤 𝘽𝙚𝙖𝙩𝙨🐲 para Nagi Bot 
-
 const handler = async (m, { isPrems, conn }) => {
-  const ownerJids = [
-    '50248019799@s.whatsapp.net', // Tu número
-    '573001533523@s.whatsapp.net' // Brayan (creador del bot)
-  ];
+  const ownerJid = '50248019799@s.whatsapp.net'; // <-- Solo tú puedes reclamar sin límite
 
   if (!global.db.data.users[m.sender]) {
     throw `⚠️ Usuario no encontrado.`;
@@ -15,17 +11,17 @@ const handler = async (m, { isPrems, conn }) => {
   const cooldown = 86400000; // 24 horas
   const last = user.lastcofre || 0;
 
-  // Si NO es owner, aplicar cooldown
-  if (!ownerJids.includes(m.sender) && (now - last < cooldown)) {
+  // Si no es el owner, aplicar cooldown
+  if (m.sender !== ownerJid && (now - last < cooldown)) {
     const restante = cooldown - (now - last);
     return conn.sendMessage(m.chat, {
-      text: `🐈 Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(restante)}* para volver a reclamar.`,
+      text: `🎁 Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(restante)}* para volver a reclamar.`,
       quoted: m
     });
   }
 
   // Recompensas aleatorias
-  const img = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745557947304.jpeg';
+  const img = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745557947304.jpeg'; // imagen confiable
   const yenes = Math.floor(Math.random() * 30);
   const tokens = Math.floor(Math.random() * 10);
   const coins = Math.floor(Math.random() * 4000);
@@ -72,4 +68,5 @@ function msToTime(duration) {
   const hours = Math.floor(duration / 3600000);
   const minutes = Math.floor((duration % 3600000) / 60000);
   return `${hours} Horas ${minutes} Minutos`;
-}
+                       }
+  
