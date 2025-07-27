@@ -42,7 +42,7 @@ global.nameqr = 'NagiBot'
 global.namebot = 'TheNagi'
 global.sessions = 'sessions'
 global.jadi = 'jadibts' 
-global.NakanoJadibts = true
+global.nagiJadibts = true
 
 //✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
