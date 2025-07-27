@@ -1,49 +1,54 @@
-import { igdl } from 'ruhend-scraper'
+import axios from 'axios';
 
 const handler = async (m, { text, conn, args }) => {
   if (!args[0]) {
-    return conn.reply(m.chat, `${emoji} Por favor, ingresa un enlace de Facebook.`, m)
+    return conn.reply(m.chat, '🚩 Por favor, ingresa un enlace de Facebook.', m, fake)
   }
 
+  const fbUrl = args[0];
   let res;
+
   try {
-    await m.react(rwait);
-    res = await igdl(args[0]);
+    await m.react('💜');
+    res = await axios.get(`https://apis-starlights-team.koyeb.app/starlight/facebook?url=${fbUrl}`);
   } catch (e) {
-    return conn.reply(m.chat, `${msm} Error al obtener datos. Verifica el enlace.`, m)
+    return conn.reply(m.chat, 'Error al obtener datos. Verifica el enlace.', m, fake)
   }
 
-  let result = res.data;
+  const result = res.data;
   if (!result || result.length === 0) {
-    return conn.reply(m.chat, `${emoji2} No se encontraron resultados.`, m)
+    return conn.reply(m.chat, 'No se encontraron resultados.', m, fake)
   }
 
-  let data;
-  try {
-    data = result.find(i => i.resolution === "720p (HD)") || result.find(i => i.resolution === "360p (SD)");
-  } catch (e) {
-    return conn.reply(m.chat, `${msm} Error al procesar los datos.`, m)
+  const videoDataHD = result.find(video => video.quality === "720p (HD)");
+  const videoDataSD = result.find(video => video.quality === "360p (SD)");
+
+  const videoUrl = videoDataHD ? videoDataHD.link_hd : videoDataSD ? videoDataSD.link_sd : null;
+
+  if (!videoUrl) {
+    return conn.reply(m.chat, 'No se encontró una resolución adecuada.', m);
   }
 
-  if (!data) {
-    return conn.reply(m.chat, `${emoji2} No se encontró una resolución adecuada.`, m)
-  }
+  const maxRetries = 3;
 
-  let video = data.url;
-  try {
-    await conn.sendMessage(m.chat, { video: { url: video }, caption: `${emoji} Aqui tienes ฅ^•ﻌ•^ฅ.`, fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m })
-    await m.react(done);
-  } catch (e) {
-    return conn.reply(m.chat, `${msm} Error al enviar el video.`, m)
-    await m.react(error);
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption: '🍓 Aquí tienes el video.', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
+      await m.react('✅');
+      break;
+    } catch (e) {
+      if (attempt === maxRetries) {
+        await m.react('❌');
+        return conn.reply(m.chat, 'Error al enviar el video después de varios intentos.', m, fake)
+      }
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
   }
 }
 
-handler.help = ['facebook', 'fb']
-handler.tags = ['descargas']
-handler.command = ['facebook', 'fb']
-handler.group = true;
+handler.help = ['facebook', 'fb'];
+handler.tags = ['descargas'];
+handler.command = ['facebook', 'fb'];
 handler.register = true;
-handler.coin = 2;
 
-export default handler
+export default handler;
