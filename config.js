@@ -108,7 +108,7 @@ global.channel = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
 global.md = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
 global.correo = 'davi.zuni.17@gmail.com';
 global.whatsApp = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
-global.correo = 'davi.zuni.17@gmail.com';
+global.correo = 'brayanfree881@gmail.com';
 
 //✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
