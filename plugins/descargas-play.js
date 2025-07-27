@@ -18,7 +18,7 @@ ytplay2 = ytplay2.all.find(item => item.videoId === videoId) || ytplay2.videos.f
 } 
 ytplay2 = ytplay2.all?.[0] || ytplay2.videos?.[0] || ytplay2  
 if (!ytplay2 || ytplay2.length == 0) {
-return m.reply('✧ No se encontraron resultados para tu búsqueda.')
+return m.reply('↪️ No se encontraron resultados para tu búsqueda.')
 }
 let { title, thumbnail, timestamp, views, ago, url, author } = ytplay2
 title = title || 'no encontrado'
@@ -55,7 +55,7 @@ author = author || 'no encontrado'
         if (!result) throw new Error('⚠ El enlace de audio no se generó correctamente.')
         await conn.sendMessage(m.chat, { audio: { url: result }, fileName: `${api.result.title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
       } catch (e) {
-        return conn.reply(m.chat, '⚠︎ No se pudo enviar el audio. Esto puede deberse a que el archivo es demasiado pesado o a un error en la generación de la URL. Por favor, intenta nuevamente más tarde.', m)
+        return conn.reply(m.chat, '🔄 No se pudo enviar el audio. Esto puede deberse a que el archivo es demasiado pesado o a un error en la generación de la URL. Por favor, intenta nuevamente más tarde.', m)
       }
     } else if (command === 'play2' || command === 'ytv' || command === 'ytmp4' || command === 'mp4') {
       try {
@@ -63,13 +63,13 @@ author = author || 'no encontrado'
         const json = await response.json()
         await conn.sendFile(m.chat, json.data.url, json.title + '.mp4', title, m)
       } catch (e) {
-        return conn.reply(m.chat, '⚠︎ No se pudo enviar el video. Esto puede deberse a que el archivo es demasiado pesado o a un error en la generación de la URL. Por favor, intenta nuevamente más tarde.', m)
+        return conn.reply(m.chat, '🔄 No se pudo enviar el video. Esto puede deberse a que el archivo es demasiado pesado o a un error en la generación de la URL. Por favor, intenta nuevamente más tarde.', m)
       }
     } else {
-      return conn.reply(m.chat, '✧︎ Comando no reconocido.', m)
+      return conn.reply(m.chat, '↩️ Comando no reconocido.', m)
     }
   } catch (error) {
-    return m.reply(`⚠︎ Ocurrió un error: ${error}`)
+    return m.reply(`🚫 Ocurrió un error: ${error}`)
   }
 }
 handler.command = handler.help = ['play', 'yta', 'ytmp3', 'play2', 'ytv', 'ytmp4', 'playaudio', 'mp4']
