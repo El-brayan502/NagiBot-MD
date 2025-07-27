@@ -88,7 +88,7 @@ global.fin = " • •"
 
 global.moneda = 'Motoko Points'
 global.banner = 'https://qu.ax/HPDvl.jpg'
-global.avatar = 'https://qu.ax/DVVQa.jpg'
+global.avatar = 'https://files.cloudkuimages.guru/images/PbmZRkdU.jpg'
 
 //✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
