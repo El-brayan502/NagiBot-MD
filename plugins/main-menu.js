@@ -51,7 +51,7 @@ ${welcomeBanner}
 %readmore`.trimStart(),
 
   header: '\n🌸 𝒞ᵃᵗᵉᵍᵒʳᶦᵃ: %category\n',
-  body: '💮 ⋆ %cmd %iscorazones %isPremium',
+  body: '┃☆ %cmd %iscorazones %isPremium',
   footer: '┗━━━━━━━━━━━━━━━━━⪩',
   after: ''
 }
