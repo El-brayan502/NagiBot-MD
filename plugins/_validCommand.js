@@ -97,7 +97,7 @@ export async function before(m, { conn }) {
             mentionedJid: [m.sender],
             externalAdReply: {
               title: 'DevBrayan',
-              body: '╭───═「 Brayan XD 」═───╮\n│◉ BOT:    NáɢɪBᴏᴛ-MD\n│◉ Brayan XD\n│◉ By: Brayan XD BOT⭐\n╰────────═┅═───────╯',
+              body: 'N A G I - A I',
               thumbnailUrl: 'https://files.cloudkuimages.guru/images/QgARFDHi.jpg',
               sourceUrl: 'https://www.instagram.com/xrljose/',
               mediaType: 1,
@@ -124,7 +124,7 @@ export async function before(m, { conn }) {
           mentionedJid: [m.sender],
           externalAdReply: {
             title: 'DevBrayan',
-            body: '╭───═「 Brayan XD 」═───╮\n│◉ BOT:    NáɢɪBᴏᴛ-MD\n│◉ Brayan XD\n│◉ By: Brayan XD BOT⭐\n╰────────═┅═───────╯',
+            body: 'N A G I - A I',
             thumbnailUrl: 'https://files.cloudkuimages.guru/images/QgARFDHi.jpg',
             sourceUrl: 'https://www.instagram.com/xrljose/',
             mediaType: 1,
