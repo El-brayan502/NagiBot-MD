@@ -39,7 +39,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (isUrl(args[0])) {
         stiker = await sticker(false, args[0], global.packsticker, global.packsticker2)
       } else {
-        return m.reply(`⚠︎ El URL es incorrecto...`)
+        return m.reply(` ⚠️ El URL es incorrecto...`)
       }
     }
   } finally {
