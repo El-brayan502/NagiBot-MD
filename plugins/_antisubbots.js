@@ -1,26 +1,22 @@
 import { areJidsSameUser } from '@whiskeysockets/baileys'
+
 export async function before(m, { participants, conn }) {
-    if (m.isGroup) {
-        let chat = global.db.data.chats[m.chat];
+  if (!m.isGroup) return
 
-         if (!chat.antiBot2) {
-            return
-        }
+  const chat = global.db.data.chats[m.chat]
+  if (!chat.antiBot2) return
 
+  const botJid = global.conn.user.jid // JID del bot principal
+  if (botJid === conn.user.jid) return
 
-        let botJid = global.conn.user.jid // JID del bot principal
+  const isBotPrincipal = participants.some(p => areJidsSameUser(botJid, p.id))
+  if (!isBotPrincipal) return
 
-       if (botJid === conn.user.jid) {
-           return
-        } else {
-           let isBotPresent = participants.some(p => areJidsSameUser(botJid, p.id))
-
-          if (isBotPresent) {
-                setTimeout(async () => {
-                    await conn.reply(m.chat, `《✧》En este grupo está el bot principal, el cual me saldré para no hacer spam.`, m)
-                    await this.groupLeave(m.chat)
-                }, 5000)// 5 segundos
-            }
-        }
-    }
+  setTimeout(async () => {
+    await conn.reply(m.chat, 
+      `💫 Oye, aquí ya está mi hermanito, el bot principal. No voy a hacerles spam, así que me largo. ¡Nos vemos luego! 👋`, 
+      m
+    )
+    await conn.groupLeave(m.chat)
+  }, 5000) // Espera 5 segundos para que lean el mensaje
 }
