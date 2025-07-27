@@ -19,7 +19,7 @@ const handler = async (m, { isPrems, conn }) => {
   if (!ownerJids.includes(m.sender) && (now - last < cooldown)) {
     const restante = cooldown - (now - last);
     return conn.sendMessage(m.chat, {
-      text: `✨️ Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(restante)}* para volver a reclamar.`,
+      text: `🐈 Ya reclamaste tu cofre\n⏰️ Regresa en: *${msToTime(restante)}* para volver a reclamar.`,
       quoted: m
     });
   }
