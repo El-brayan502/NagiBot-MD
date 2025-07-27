@@ -18,7 +18,7 @@ txt = format(JSON.parse(txt + ''))
 txt = txt + ''
 } finally {
 m.reply(txt.slice(0, 65536) + '')
-await m.react('✔️')
+await m.react('✅️')
 }}
 
 handler.help = ['get']
