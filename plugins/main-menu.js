@@ -50,7 +50,7 @@ ${welcomeBanner}
 🍧 ¡Suki está lista para acompañarte, %name!
 %readmore`.trimStart(),
 
-  header: '\n🌸 𝒞ᵃᵗᵉᵍᵒʳᶦᵃ: %category\n',
+  header: '┏━━⪩「 %category 」⪨',
   body: '┃☆ %cmd %iscorazones %isPremium',
   footer: '┗━━━━━━━━━━━━━━━━━⪩',
   after: ''
