@@ -3,9 +3,9 @@ import { format } from 'util'
 
 let handler = async (m, { conn, text }) => {
 if (m.fromMe) return
-if (!/^https?:\/\//.test(text)) return m.reply(`❀ Por favor, ingresa la *url* de la pagina.`)
+if (!/^https?:\/\//.test(text)) return m.reply(`⚽️ Por favor, ingresa la *url* de la pagina.`)
 let url = text
-await m.react('🕒')
+await m.react('🔄')
 let res = await fetch(url)
 if (res.headers.get('content-length') > 100 * 1024 * 1024 * 1024) {
 throw `Content-Length: ${res.headers.get('content-length')}`
