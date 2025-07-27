@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   const end = performance.now();
   const ping = end - start;
 
-  await m.reply(`✅ *RoxyBot está activo*\n📡 *Velocidad:* ${ping.toFixed(2)} ms`);
+  await m.reply(`✅ *Nagi está activo*\n📡 *Velocidad:* ${ping.toFixed(2)} ms`);
 };
 
 handler.command = ['ping', 'p'];
