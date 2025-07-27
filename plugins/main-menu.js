@@ -52,7 +52,7 @@ ${welcomeBanner}
 
   header: '\n🌸 𝒞ᵃᵗᵉᵍᵒʳᶦᵃ: %category\n',
   body: '💮 ⋆ %cmd %iscorazones %isPremium',
-  footer: '\n𓆩⟡𓆪',
+  footer: '┗━━━━━━━━━━━━━━━━━⪩',
   after: ''
 }
 
