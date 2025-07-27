@@ -10,12 +10,12 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
       if (/video/g.test(mime) && (q.msg || q).seconds > 15) {
-        return m.reply(`✧ ¡El video no puede durar más de 15 segundos!...`)
+        return m.reply(`⚠️ ¡El video no puede durar más de 15 segundos!...`)
       }
       let img = await q.download?.()
 
       if (!img) {
-        return conn.reply(m.chat, `❀ Por favor, envía una imagen o video para hacer un sticker.`, m, rcanal)
+        return conn.reply(m.chat, `⚠️ Por favor, envía una imagen o video para hacer un sticker.`, m, rcanal)
       }
 
       let out
@@ -46,7 +46,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (stiker) {
       conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     } else {
-      return conn.reply(m.chat, `❀ Por favor, envía una imagen o video para hacer un sticker.`, m, rcanal)
+      return conn.reply(m.chat, `♻️ Por favor, envía una imagen o video para hacer un sticker.`, m, rcanal)
     }
   }
 }
