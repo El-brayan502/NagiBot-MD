@@ -87,335 +87,68 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
   *【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】*
 
-  ┏━━❃ 「 𝐌𝐞𝐧𝐮 𝐑𝐲𝐳𝐞𝐌𝐃 」 ❃
-  ┃🦠 .menu
-  ┃🦠 .runtime
-  ┃🦠 .admins
-  ┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「  ᴍᴇɴᴜ́ ᴘʀɪɴᴄɪᴘᴀʟ 」⪨
+┃☆ ${usedPrefix}afk [alasan]  
+┃☆ ${usedPrefix}menu  
+┃☆ ${usedPrefix}runtime  
+┃☆ ${usedPrefix}blocklist  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「  ɢʀᴜᴘᴏ ᴀᴅᴏʀᴀʙʟᴇ 」⪨
+┃☆ ${usedPrefix}lid  
+┃☆ ${usedPrefix}invite *<521>*  
+┃☆ ${usedPrefix}setemoji *<emoji>*  
+┃☆ ${usedPrefix}todos *<mensaje opcional>*  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「  ᴇɴᴇʀɢɪ́ᴀ ꜱᴜᴋɪ 」⪨
+┃☆ ${usedPrefix}qr  
+┃☆ ${usedPrefix}code  
+┃☆ ${usedPrefix}token  
+┃☆ ${usedPrefix}sockets  
+┃☆ ${usedPrefix}deletesesion  
+┃☆ ${usedPrefix}pausarai  
+┗━━━━━━━━━━━━━━━━━⪩
 
-  ┏━━❃ 「 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐜𝐢ó𝐧 」 ❃
-  ┃🦠 .creador
-  ┃🦠 .dash
-  ┃🦠 .ds
-  ┃🦠 .status
-  ┃🦠 .horario
-  ┃🦠 .infobot
-  ┃🦠 .ping
-  ┃🦠 .reportar
-  ┃🦠 .sistema
-  ┃🦠 .speed
-  ┃🦠 .speedtest
-  ┃🦠 .donar
-  ┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「  ᴅɪᴠᴇʀꜱɪᴏ́ɴ ᴍᴀ́ɢɪᴄᴀ 」⪨
+┃☆ ${usedPrefix}simi  
+┃☆ ${usedPrefix}bot  
+┃☆ ${usedPrefix}amistad  
+┃☆ ${usedPrefix}gay <@tag> | <nombre>  
+┃☆ ${usedPrefix}lesbiana <@tag> | <nombre>  
+┃☆ ${usedPrefix}pajero <@tag> | <nombre>  
+┃☆ ${usedPrefix}pajera <@tag> | <nombre>  
+┃☆ ${usedPrefix}puto <@tag> | <nombre>  
+┃☆ ${usedPrefix}puta <@tag> | <nombre>  
+┃☆ ${usedPrefix}manco <@tag> | <nombre>  
+┃☆ ${usedPrefix}manca <@tag> | <nombre>  
+┃☆ ${usedPrefix}rata <@tag> | <nombre>  
+┃☆ ${usedPrefix}prostituta <@tag> | <nombre>  
+┃☆ ${usedPrefix}prostituto <@tag> | <nombre>  
+┃☆ ${usedPrefix}chiste  
+┃☆ ${usedPrefix}consejo  
+┃☆ ${usedPrefix}doxear  
+┃☆ ${usedPrefix}doxxing <nombre> | <@tag>  
+┃☆ ${usedPrefix}facto  
+┃☆ ${usedPrefix}formarpareja  
+┃☆ ${usedPrefix}formarpareja5  
+┃☆ ${usedPrefix}frase  
+┃☆ ${usedPrefix}iqtest  
+┃☆ ${usedPrefix}meme  
+┃☆ ${usedPrefix}morse *<encode|decode>*  
+┃☆ ${usedPrefix}nombreninja *<texto>*  
+┃☆ ${usedPrefix}pajeame  
+┃☆ ${usedPrefix}personalidad  
+┃☆ ${usedPrefix}piropo  
+┃☆ ${usedPrefix}pregunta  
+┃☆ ${usedPrefix}ship  
+┃☆ ${usedPrefix}love  
+┃☆ ${usedPrefix}sorteo  
+┃☆ ${usedPrefix}top *<texto>*  
+┃☆ ${usedPrefix}formartrio @usuario1 @usuario2  
+┃☆ ${usedPrefix}zodiac *2002 02 25*  
+┃☆ ${usedPrefix}letra *<texto>*  
+┗━━━━━━━━━━━━━━━━━⪩
 
-  ┏━━❃ 「 𝐑𝐞𝐠𝐢𝐬𝐭𝐫𝐨 」 ❃
-  ┃🦠 .unreg
-  ┃🦠 .marry
-  ┃🦠 .setgenre
-  ┃🦠 .delgenre
-  ┃🦠 .setbirth
-  ┃🦠 .delbirth
-  ┃🦠 .setdesc
-  ┃🦠 .deldesc
-  ┗━━━━━━━━━━━━━━━━━⪩
 
-  ┏━━❃ 「 𝐃𝐢𝐯𝐞𝐫𝐬𝐢ó𝐧 」 ❃
-  ┃🦠 .consejo
-  ┃🦠 .divorce
-  ┃🦠 .doxear
-  ┃🦠 .parejas
-  ┃🦠 .pareja5
-  ┃🦠 .formartrio
-  ┃🦠 .iqtest
-  ┃🦠 .gay2
-  ┃🦠 .meme
-  ┃🦠 .morse
-  ┃🦠 .nombreninja
-  ┃🦠 .pajeame
-  ┃🦠 .personalidad
-  ┃🦠 .piropo
-  ┃🦠 .pokedex
-  ┃🦠 .pregunta
-  ┃🦠 .ship
-  ┃🦠 .top
-  ┃🦠 .zodiac
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐉𝐮𝐞𝐠𝐨𝐬 」 ❃
-  ┃🦠 .ttt
-  ┃🦠 .ahorcado
-  ┃🦠 .math
-  ┃🦠 .ppt
-  ┃🦠 .pvp
-  ┃🦠 .sopa
-  ┃🦠 .slot
-  ┃🦠 .cf
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐄𝐦𝐨𝐱‑𝐀𝐧𝐢𝐦𝐞 」 ❃
-  ┃🦠 .angry
-  ┃🦠 .bath
-  ┃🦠 .bite
-  ┃🦠 .bleh
-  ┃🦠 .blush
-  ┃🦠 .bored
-  ┃🦠 .cafe
-  ┃🦠 .cry
-  ┃🦠 .cuddle
-  ┃🦠 .dance
-  ┃🦠 .drunk
-  ┃🦠 .eat
-  ┃🦠 .facepalm
-  ┃🦠 .happy
-  ┃🦠 .hello
-  ┃🦠 .hug
-  ┃🦠 .kill
-  ┃🦠 .kiss
-  ┃🦠 .kiss2
-  ┃🦠 .laugh
-  ┃🦠 .lick
-  ┃🦠 .love2
-  ┃🦠 .patt
-  ┃🦠 .poke
-  ┃🦠 .pout
-  ┃🦠 .preg
-  ┃🦠 .punch
-  ┃🦠 .run
-  ┃🦠 .sad
-  ┃🦠 .scared
-  ┃🦠 .seduce
-  ┃🦠 .shy
-  ┃🦠 .slap
-  ┃🦠 .sleep
-  ┃🦠 .smoke
-  ┃🦠 .think
-  ┃🦠 .undress
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐑𝐨𝐥𝐥𝐰𝐚𝐢𝐟𝐮𝐬 」 ❃
-  ┃🦠 .rw
-  ┃🦠 .topws
-  ┃🦠 .claim
-  ┃🦠 .harem
-  ┃🦠 .regalar
-  ┃🦠 .vote
-  ┃🦠 .wvideo
-  ┃🦠 .wimage
-  ┃🦠 .winfo
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐄𝐜𝐨𝐧𝐨𝐦𝐢́𝐚 」 ❃
-  ┃🦠 .bank
-  ┃🦠 .crimen
-  ┃🦠 .depositar
-  ┃🦠 .minar
-  ┃🦠 .retirar
-  ┃🦠 .ruleta
-  ┃🦠 .trabajar
-  ┃🦠 .transfer
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐑‑𝐏‑𝐆 」 ❃
-  ┃🦠 .cofre
-  ┃🦠 .daily
-  ┃🦠 .cazar
-  ┃🦠 .halloween
-  ┃🦠 .heal
-  ┃🦠 .lb
-  ┃🦠 .inventario
-  ┃🦠 .mazmorra
-  ┃🦠 .monthly
-  ┃🦠 .weekly
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐒𝐞𝐫𝐛𝐨𝐭/𝐂𝐨𝐝𝐞 」 ❃
-  ┃🦠 .jadibot
-  ┃🦠 .deletebot
-  ┃🦠 .stop
-  ┃🦠 .serbot
-  ┃🦠 .serbot --code
-  ┃🦠 .token
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐁𝐮𝐬𝐜𝐚𝐝𝐨𝐫𝐞𝐬 」 ❃
-  ┃🦠 .githubsearch
-  ┃🦠 .gnula
-  ┃🦠 .googlesearch
-  ┃🦠 .npmjs
-  ┃🦠 .tiktoksearch
-  ┃🦠 .wikis
-  ┃🦠 .xnxxsearch
-  ┃🦠 .ytsearch
-  ┃🦠 .imagen
-  ┃🦠 .stickergif
-  ┃🦠 .gif
-  ┃🦠 .getsticker
-  ┃🦠 .spotplay
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐃𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐬 」 ❃
-  ┃🦠 .animedl
-  ┃🦠 .facebook
-  ┃🦠 .fb
-  ┃🦠 .gdrive
-  ┃🦠 .gitclone
-  ┃🦠 .instagram2
-  ┃🦠 .ig2
-  ┃🦠 .mangad
-  ┃🦠 .mediafire
-  ┃🦠 .mega
-  ┃🦠 .npmdl
-  ┃🦠 .aptoide
-  ┃🦠 .pinterest
-  ┃🦠 .play
-  ┃🦠 .tiktokrandom
-  ┃🦠 .tiktokimg
-  ┃🦠 .spotify
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐀𝐢/𝐈𝐚 」 ❃
-  ┃🦠 .demo
-  ┃🦠 .gemini
-  ┃🦠 .ia
-  ┃🦠 .iapolli
-  ┃🦠 .gptpolli
-  ┃🦠 .gptpolli2
-  ┃🦠 .simi
-  ┃🦠 .flux
-  ┃🦠 .llama
-  ┃🦠 .genimg
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐆𝐫𝐮𝐩𝐨𝐬 」 ❃
-  ┃🦠 .warn
-  ┃🦠 .warns
-  ┃🦠 .delwarn
-  ┃🦠 .resetwarn
-  ┃🦠 .add
-  ┃🦠 .admins
-  ┃🦠 .delete
-  ┃🦠 .demote
-  ┃🦠 .encuesta
-  ┃🦠 .hidetag
-  ┃🦠 .infogrupo
-  ┃🦠 .kick
-  ┃🦠 .link
-  ┃🦠 .promote
-  ┃🦠 .revoke
-  ┃🦠 .setbye
-  ┃🦠 .Setdesc
-  ┃🦠 .setname
-  ┃🦠 .setwelcome
-  ┃🦠 .tagall
-  ┃🦠 .convocar
-  ┃🦠 .everyone
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐇𝐞𝐫𝐫𝐚𝐦𝐢𝐞𝐧𝐭𝐚𝐬 」 ❃
-  ┃🦠 .cal
-  ┃🦠 .clima
-  ┃🦠 .fake
-  ┃🦠 .hd
-  ┃🦠 .readmore
-  ┃🦠 .spamwa
-  ┃🦠 .ssweb
-  ┃🦠 .tamaño
-  ┃🦠 .upmf
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐢𝐝𝐨𝐫𝐞𝐬 𝐝𝐞 𝐀𝐮𝐝𝐢𝐨𝐬 」❃
-  ┃🦠 .bass
-  ┃🦠 .blown
-  ┃🦠 .deep
-  ┃🦠 .earrape
-  ┃🦠 .fast
-  ┃🦠 .fat
-  ┃🦠 .nightcore
-  ┃🦠 .reverse
-  ┃🦠 .robot
-  ┃🦠 .slow
-  ┃🦠 .smooth
-  ┃🦠 .tupai
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐢𝐝𝐨𝐫𝐞𝐬 」 ❃
-  ┃🦠 .ibb
-  ┃🦠 .togifaud
-  ┃🦠 .tourl
-  ┃🦠 .tourlAll
-  ┃🦠 .postimg
-  ┃🦠 .tovideo
-  ┃🦠 .tts
-  ┃🦠 .tts2
-  ┃🦠 .tts3
-  ┃🦠 .tourl2
-  ┃🦠 .niggafy
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━❃ 「 𝐒𝐭𝐢𝐜𝐤𝐞𝐫𝐬 」 ❃
-  ┃🦠 .emojimix
-  ┃🦠 .pfp
-  ┃🦠 .qc
-  ┃🦠 .sticker
-  ┃🦠 .toimg
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━⪩「 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐜𝐢ó𝐧 」⪨
-  ┃🦠 .autoadmin
-  ┃🦠 .banchat
-  ┃🦠 .banuser
-  ┃🦠 .grupocrear
-  ┃🦠 .join
-  ┃🦠 .unbanchat
-  ┃🦠 .unbanuser
-  ┗━━━━━━━━━━━━━━━━━⪩
-
-  ┏━━⪩「 𝐂𝐫𝐞𝐚𝐝𝐨𝐫/𝐎𝐰𝐧𝐞𝐫 」⪨
-  ┃🦠 .reactch
-  ┃🦠 .listafk
-  ┃🦠 .expired
-  ┃🦠 .addyenes
-  ┃🦠 .addprem
-  ┃🦠 .copia
-  ┃🦠 .broadcast
-  ┃🦠 .bc
-  ┃🦠 .mgp
-  ┃🦠 .broadcastgroup
-  ┃🦠 .bcgc
-  ┃🦠 .bcgc2
-  ┃🦠 .cleanf­iles
-  ┃🦠 .cleartmp
-  ┃🦠 .setcmd
-  ┃🦠 .deletefile
-  ┃🦠 .delexpired
-  ┃🦠 .delvn
-  ┃🦠 .delmsg
-  ┃🦠 .delimg
-  ┃🦠 .delsticker
-  ┃🦠 .delprem
-  ┃🦠 .reunion
-  ┃🦠 .removeowner
-  ┃🦠 .dsowner
-  ┃🦠 .fetch
-  ┃🦠 .getplugin
-  ┃🦠 .groups
-  ┃🦠 .grouplist
-  ┃🦠 .kickall
-  ┃🦠 .nuevabiobot
-  ┃🦠 .nuevafotobot
-  ┃🦠 .nuevonombrebot
-  ┃🦠 .prefix
-  ┃🦠 .resetpersonajes
-  ┃🦠 .resetprefix
-  ┃🦠 .restart
-  ┃🦠 .saveplugin
-  ┃🦠 .update
-  ┃🦠 .actualizar
-  ┃🦠 .quitarcoin
-  ┃🦠 .quitarbank
-  ┃🦠 .>*
-  ┃🦠 .=>*
-  ┗━━━━━━━━━━━━━━━━━⪩
   `.trim()
 
     // Unir header + body
