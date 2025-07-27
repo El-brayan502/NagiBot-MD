@@ -46,7 +46,7 @@ global.nagiJadibts = true
 
 //✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
-global.packname = 'Eʟ Mᴇᴊᴏʀ Bᴏᴛ ᴅᴇ WʜᴀᴛsAᴘᴘ'
+global.packname = '╭───═「 Brayan XD 」═───╮\n│◉ BOT:    NáɢɪBᴏᴛ-MD\n│◉ Brayan XD\n│◉ By: Brayan XD BOT⭐\n╰────────═┅═───────╯'
 global.botname = '⚽◌*̥₊ NᴀɢɪBᴏᴛ-ᴍᴅ ◌❐🎋༉'
 global.wm = '© ᗷᖇᗩYᗩᑎ ᑕᖇᗴᗩᗪOᖇ'
 global.wm3 = '⫹⫺  ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ'
