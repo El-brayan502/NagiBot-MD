@@ -107,8 +107,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ┃☆ ${usedPrefix}deletesesion  
 ┃☆ ${usedPrefix}pausarai  
 ┗━━━━━━━━━━━━━━━━━⪩
-
-┏━━⪩「  ᴅɪᴠᴇʀꜱɪᴏ́ɴ ᴍᴀ́ɢɪᴄᴀ 」⪨
+┏━━⪩「 ᴅɪᴠᴇʀꜱɪᴏ́ɴ ᴍᴀ́ɢɪᴄᴀ 」⪨
 ┃☆ ${usedPrefix}simi  
 ┃☆ ${usedPrefix}bot  
 ┃☆ ${usedPrefix}amistad  
@@ -147,7 +146,154 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 ┃☆ ${usedPrefix}zodiac *2002 02 25*  
 ┃☆ ${usedPrefix}letra *<texto>*  
 ┗━━━━━━━━━━━━━━━━━⪩
-
+┏━━⪩「 ɴᴀʙʟᴇ 」⪨
+┃☆ ${usedPrefix}welcome  
+┃☆ ${usedPrefix}bienvenida  
+┃☆ ${usedPrefix}antiprivado  
+┃☆ ${usedPrefix}antiprivate  
+┃☆ ${usedPrefix}restrict  
+┃☆ ${usedPrefix}restringir  
+┃☆ ${usedPrefix}autolevelup  
+┃☆ ${usedPrefix}autonivel  
+┃☆ ${usedPrefix}antibot  
+┃☆ ${usedPrefix}antibots  
+┃☆ ${usedPrefix}autoaceptar  
+┃☆ ${usedPrefix}aceptarauto  
+┃☆ ${usedPrefix}autorechazar  
+┃☆ ${usedPrefix}rechazarauto  
+┃☆ ${usedPrefix}autoresponder  
+┃☆ ${usedPrefix}autorespond  
+┃☆ ${usedPrefix}antisubbots  
+┃☆ ${usedPrefix}antibot2  
+┃☆ ${usedPrefix}modoadmin  
+┃☆ ${usedPrefix}soloadmin  
+┃☆ ${usedPrefix}reaction  
+┃☆ ${usedPrefix}reaccion  
+┃☆ ${usedPrefix}nsfw  
+┃☆ ${usedPrefix}modohorny  
+┃☆ ${usedPrefix}antispam  
+┃☆ ${usedPrefix}jadibotmd  
+┃☆ ${usedPrefix}modejadibot  
+┃☆ ${usedPrefix}subbots  
+┃☆ ${usedPrefix}detect  
+┃☆ ${usedPrefix}avisos  
+┃☆ ${usedPrefix}antilink  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴛᴏᴏʟꜱ 」⪨
+┃☆ ${usedPrefix}dalle  
+┃☆ ${usedPrefix}imagen <query>  
+┃☆ ${usedPrefix}tourl  
+┃☆ ${usedPrefix}setdespedida  
+┃☆ ${usedPrefix}setwelcome  
+┃☆ ${usedPrefix}get  
+┃☆ ${usedPrefix}nuevafotochannel  
+┃☆ ${usedPrefix}nosilenciarcanal  
+┃☆ ${usedPrefix}silenciarcanal  
+┃☆ ${usedPrefix}noseguircanal  
+┃☆ ${usedPrefix}seguircanal  
+┃☆ ${usedPrefix}avisoschannel  
+┃☆ ${usedPrefix}resiviravisos  
+┃☆ ${usedPrefix}inspect  
+┃☆ ${usedPrefix}inspeccionar  
+┃☆ ${usedPrefix}eliminarfotochannel  
+┃☆ ${usedPrefix}reactioneschannel  
+┃☆ ${usedPrefix}reaccioneschannel  
+┃☆ ${usedPrefix}nuevonombrecanal  
+┃☆ ${usedPrefix}nuevadescchannel  
+┃☆ ${usedPrefix}invite  
+┃☆ ${usedPrefix}setcatalogo  
+┃☆ ${usedPrefix}setbanner  
+┃☆ ${usedPrefix}setmoneda  
+┃☆ ${usedPrefix}setname  
+┃☆ ${usedPrefix}setmeta  
+┃☆ ${usedPrefix}delmeta  
+┃☆ ${usedPrefix}wm  
+┃☆ ${usedPrefix}detectarsyntax  
+┃☆ ${usedPrefix}fake  
+┃☆ ${usedPrefix}hd  
+┃☆ ${usedPrefix}ver  
+┃☆ ${usedPrefix}spamwa <number>|<mesage>|<no of messages>  
+┃☆ ${usedPrefix}ssweb  
+┃☆ ${usedPrefix}ss  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴀɪ 」⪨
+┃☆ ${usedPrefix}demo *<texto>*  
+┃☆ ${usedPrefix}flux *<texto>*  
+┃☆ ${usedPrefix}gemini  
+┃☆ ${usedPrefix}ia  
+┃☆ ${usedPrefix}chatgpt  
+┃☆ ${usedPrefix}luminai  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴀɴɪᴍᴇ 」⪨
+┃☆ ${usedPrefix}angry  
+┃☆ ${usedPrefix}bath  
+┃☆ ${usedPrefix}bite  
+┃☆ ${usedPrefix}bleh  
+┃☆ ${usedPrefix}blush  
+┃☆ ${usedPrefix}bored  
+┃☆ ${usedPrefix}clap  
+┃☆ ${usedPrefix}coffee  
+┃☆ ${usedPrefix}cry  
+┃☆ ${usedPrefix}cuddle  
+┃☆ ${usedPrefix}dance  
+┃☆ ${usedPrefix}drunk  
+┃☆ ${usedPrefix}eat  
+┃☆ ${usedPrefix}facepalm  
+┃☆ ${usedPrefix}happy  
+┃☆ ${usedPrefix}hello/hola @tag  
+┃☆ ${usedPrefix}hug  
+┃☆ ${usedPrefix}kill  
+┃☆ ${usedPrefix}kiss  
+┃☆ ${usedPrefix}laugh  
+┃☆ ${usedPrefix}lick  
+┃☆ ${usedPrefix}love2/enamorada @tag  
+┃☆ ${usedPrefix}patt/acariciar @tag  
+┃☆ ${usedPrefix}poke/picar @tag  
+┃☆ ${usedPrefix}pout/pucheros @tag  
+┃☆ ${usedPrefix}ppcouple  
+┃☆ ${usedPrefix}pregg/embarazar @tag  
+┃☆ ${usedPrefix}punch/golpear @tag  
+┃☆ ${usedPrefix}run/correr @tag  
+┃☆ ${usedPrefix}sad/triste @tag  
+┃☆ ${usedPrefix}scared/asustada @tag  
+┃☆ ${usedPrefix}seduce/seducir @tag  
+┃☆ ${usedPrefix}shy/timida @tag  
+┃☆ ${usedPrefix}slap/bofetada @tag  
+┃☆ ${usedPrefix}sleep/dormir @tag  
+┃☆ ${usedPrefix}smoke/fumar @tag  
+┃☆ ${usedPrefix}think  
+┃☆ ${usedPrefix}waifu  
+┃☆ ${usedPrefix}infoanime  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ʙᴜꜱᴄᴀᴅᴏʀ 」⪨
+┃☆ ${usedPrefix}imagen <query>  
+┃☆ ${usedPrefix}tiktoksearch <txt>  
+┃☆ ${usedPrefix}xnxxsearch <query>  
+┃☆ ${usedPrefix}ytsearch  
+┗━━━━━━━━━━━━━━━━━⪩
+┏━━⪩「 ᴅᴇꜱᴄᴀʀɢᴀꜱ 」⪨
+┃☆ ${usedPrefix}imagen <query>  
+┃☆ ${usedPrefix}facebook  
+┃☆ ${usedPrefix}fb  
+┃☆ ${usedPrefix}gitclone *<url git>*  
+┃☆ ${usedPrefix}instagram  
+┃☆ ${usedPrefix}ig  
+┃☆ ${usedPrefix}mediafire  
+┃☆ ${usedPrefix}mega  
+┃☆ ${usedPrefix}apkmod  
+┃☆ ${usedPrefix}npmdl  
+┃☆ ${usedPrefix}pinvid *<link>*  
+┃☆ ${usedPrefix}play  
+┃☆ ${usedPrefix}yta  
+┃☆ ${usedPrefix}ytmp3  
+┃☆ ${usedPrefix}play2  
+┃☆ ${usedPrefix}ytv  
+┃☆ ${usedPrefix}ytmp4  
+┃☆ ${usedPrefix}playaudio  
+┃☆ ${usedPrefix}mp4  
+┃☆ ${usedPrefix}tiktokrandom  
+┃☆ ${usedPrefix}tiktokimg <url>  
+┗━━━━━━━━━━━━━━━━━⪩
 
   `.trim()
 
