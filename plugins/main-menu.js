@@ -6,7 +6,7 @@ import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
   try {
-    await m.react('⚽️')
+    await m.react('✅️')
 
     let { exp, bank, registered } = global.db.data.users[m.sender]
     let name = await conn.getName(m.sender)
