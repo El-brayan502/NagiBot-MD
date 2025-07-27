@@ -103,10 +103,8 @@ global.photoSity = [catalogo2]
 
 //✎﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
-global.gp1 = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
-global.comunidad1 = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
+global.gp1 = 'https://chat.whatsapp.com/HACwRMduEef1DKXPWQoJ9j';
 global.channel = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
-global.channel2 = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
 global.md = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
 global.correo = 'davi.zuni.17@gmail.com';
 global.cn = 'https://chat.whatsapp.com/GDUv1z6UG0k2xe8zAEUnFf';
