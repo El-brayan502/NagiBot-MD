@@ -1,20 +1,15 @@
-import speed from 'performance-now'
-import { spawn, exec, execSync } from 'child_process'
-
 let handler = async (m, { conn }) => {
-let timestamp = speed()
-let sentMsg = await conn.reply(m.chat, '❀ Calculando ping...', m)
-let latency = speed() - timestamp
-exec(`neofetch --stdout`, (error, stdout, stderr) => {
-let child = stdout.toString("utf-8");
-let ssd = child.replace(/Memory:/, "Ram:")
+  const start = performance.now();
+  await m.reply('🏓 *Probando velocidad...*');
+  const end = performance.now();
+  const ping = end - start;
 
-let result = `✰ *¡Pong!*\n> Tiempo ⴵ ${latency.toFixed(4).split(".")[0]}ms\n${ssd}`
-conn.sendMessage(m.chat, { text: result, edit: sentMsg.key }, { quoted: m })
-})
-}
-handler.help = ['ping']
-handler.tags = ['info']
-handler.command = ['ping', 'p']
+  await m.reply(`✅ *RoxyBot está activo*\n📡 *Velocidad:* ${ping.toFixed(2)} ms`);
+};
 
-export default handler
+handler.command = ['ping', 'p'];
+handler.tags = ['info'];
+handler.help = ['ping'];
+handler.register = true;
+
+export default handler;
