@@ -2,10 +2,9 @@ import { xpRange} from '../lib/levelling.js'
 import fetch from 'node-fetch'
 
 const channelRD = {
-const channelRD = { 
-      id: '120363312092804854@newsletter', 
-      name: 'Oficial channel Roxy-MD'
-    }
+  id: '120363402097425674@newsletter',
+  name: '☁️ sᴜᴋɪ_ʙᴏᴛ⋆.ᴍᴅ 🌸'
+}
 
 const textFancyCaps = text => {
   const charset = {
