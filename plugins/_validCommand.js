@@ -4,7 +4,7 @@ export async function before(m, { conn }) {
 
     const Buffer = global.Buffer || ((...args) => new Uint8Array(...args));
     
-    const channelRD = global.channelRD || { id: '120363312092804854@newsletter', name: 'NAGI CHANNEL' };
+    const channelRD = global.channelRD || { id: '120363312092804854@newsletter', name: 'N A G I - A I' };
     const metanombre = global.metanombre || 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ';
 
     if (!Array.prototype.getRandom) {
