@@ -64,7 +64,7 @@ export async function before(m, { conn }) {
           mediaUrl: null,
           description: null,
           previewType: "PHOTO",
-          thumbnailUrl: 'https://files.cloudkuimages.guru/images/QgARFDHi.jpg',
+          thumbnailUrl: 'https://files.cloudkuimages.guru/images/7UhOMrIe.jpg',
           sourceUrl: 'https://www.instagram.com/xrljose/',
           mediaType: 1,
           renderLargerThumbnail: true
