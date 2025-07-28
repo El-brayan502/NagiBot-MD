@@ -15,7 +15,7 @@ export async function before(m, { conn }) {
   for (const user of participants) {
     let name = await conn.getName(user);
     let pp = await conn.profilePictureUrl(user, 'image').catch(() =>
-      'https://loli-roxy.neocities.org/nagi-subs.jpg'
+      'https://files.cloudkuimages.guru/images/Y7PT6XwM.jpg'
     );
     const taguser = '@' + user.split('@')[0];
 
@@ -40,7 +40,7 @@ export async function before(m, { conn }) {
     // DESPEDIDA
     if (m.messageStubType === 28 || m.messageStubType === 32) {
       await conn.sendMessage(m.chat, {
-        text: `👋 Hasta pronto, no te extrañaremos XD!!*\n*━━━━━━━━━━━━━━━━*\n\n🐢 *• Nombre:* @${numParam}\n🎋 *• Bio:* https://loli-roxy.neocities.org/\n🕒 *• Grupo:* _${groupMetadata.subject}_ \n🗓️ *• Fecha:* ${fecha}\n\n- *Salúdame a Maradona bro* -`,
+        text: `👋 ${taguser} ha salido del grupo *${groupMetadata.subject}*.\n\n🧑 Nombre: *${name}*\n📱 ID: ${user}\n📆 Fecha: ${fecha}\n\n¡Buena suerte en tu camino!`,
         mentions: [user],
         contextInfo: {
           externalAdReply: {
