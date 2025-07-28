@@ -55,12 +55,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (stub === ADDED) {
     const title = 'ゲ◜៹ New Member ៹◞ゲ'
     const text  =
-      `❀ *Bienvenido* a _${groupMetadata.subject}_\n` +
-      `✰ @${numParam}\n` +
-      `${global.welcom1}\n` +
-      `✦ Ahora somos *${groupSize}* miembros.\n` +
-      `•(=^●ω●^=)• ¡Disfruta tu estadía!\n` +
-      `> ✐ Usa *#help* para ver los comandos.`
+      `👋 Hasta pronto, no te extrañaremos XD!!*\n*━━━━━━━━━━━━━━━━*\n\n🐢 *• Nombre:* @${numParam}\n🎋 *• Bio:* https://loli-roxy.neocities.org/\n🕒 *• Grupo:* _${groupMetadata.subject}_ \n🗓️ *• Fecha:* ${fecha}\n\n- *Salúdame a Maradona bro* -`
     await conn.sendMini(
       m.chat,
       title,
