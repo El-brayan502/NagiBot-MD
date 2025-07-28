@@ -125,7 +125,7 @@ export async function before(m, { conn }) {
           externalAdReply: {
             title: 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
             body: 'N A G I - A I',
-            thumbnailUrl: 'https://files.cloudkuimages.guru/images/QgARFDHi.jpg',
+            thumbnailUrl: 'https://files.cloudkuimages.guru/images/8bkuiWAR.jpg',
             sourceUrl: 'https://www.instagram.com/xrljose/',
             mediaType: 1,
             renderLargerThumbnail: true
