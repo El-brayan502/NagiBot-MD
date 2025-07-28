@@ -74,7 +74,7 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
     const body = `
   [ 𝗜 𝗡 𝗙𝗢 - 𝗨 𝗦 𝗘 𝗥 ]
-> 𖥔 ︳*Hola: ${taguser}*
+> 𖥔 ︳*Hola:* ${taguser}
 > 𖥔 ︳*ɴɪᴠᴇʟ: ${user.level}*
 > 𖥔 ︳ *ᴇxᴘ: ${exp}*
 > 𖥔 ︳ *ᴇɴ ᴇsᴛᴇ ᴄʜᴀᴛ: ${groupUserCount}*
