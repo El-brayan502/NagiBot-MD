@@ -38,7 +38,7 @@ export async function before(m, { conn }) {
       },
       message: {
         contactMessage: {
-          displayName: 'Meta Ai',
+          displayName: 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
           vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta AI\nORG:Meta AI\nTEL;type=CELL;type=VOICE;waid=50231458537:+502 3145 8537\nEND:VCARD`,
           jpegThumbnail: Buffer.from([]),
           contextInfo: {
@@ -60,7 +60,7 @@ export async function before(m, { conn }) {
         },
         externalAdReply: {
           title: 'DevBrayan',
-          body: 'NagiBot-MD',
+          body: 'N A G I - A I',
           mediaUrl: null,
           description: null,
           previewType: "PHOTO",
@@ -110,7 +110,7 @@ export async function before(m, { conn }) {
           await conn.sendMessage(m.chat, adReplyMsgBanned, { quoted: global.fakeMetaMsg });
         } catch (e) {
           console.error("Error al enviar mensaje con formato:", e);
-          await m.reply(`《✦》El bot *RoxyBot-MD* está desactivado en este grupo.\n\n> ✦ Un *administrador* puede activarlo con el comando:\n> » *${usedPrefix}bot on*`);
+          await m.reply(`《✦》El bot *NagiBot-MD* está desactivado en este grupo.\n\n> ✦ Un *administrador* puede activarlo con el comando:\n> » *${usedPrefix}bot on*`);
         }
         return;
       }
