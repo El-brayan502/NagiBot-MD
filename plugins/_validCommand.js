@@ -59,7 +59,7 @@ export async function before(m, { conn }) {
           newsletterName: channelRD.name
         },
         externalAdReply: {
-          title: 'DevBrayan',
+          title: 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
           body: 'N A G I - A I',
           mediaUrl: null,
           description: null,
@@ -96,7 +96,7 @@ export async function before(m, { conn }) {
           contextInfo: {
             mentionedJid: [m.sender],
             externalAdReply: {
-              title: 'DevBrayan',
+              title: 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
               body: 'N A G I - A I',
               thumbnailUrl: 'https://files.cloudkuimages.guru/images/QgARFDHi.jpg',
               sourceUrl: 'https://www.instagram.com/xrljose/',
@@ -123,7 +123,7 @@ export async function before(m, { conn }) {
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
-            title: 'DevBrayan',
+            title: 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
             body: 'N A G I - A I',
             thumbnailUrl: 'https://files.cloudkuimages.guru/images/QgARFDHi.jpg',
             sourceUrl: 'https://www.instagram.com/xrljose/',
