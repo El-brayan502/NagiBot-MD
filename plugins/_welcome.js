@@ -39,7 +39,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   // Foto de perfil del que entra/sale
   let pp = await conn.profilePictureUrl(jidParam, 'image')
-    .catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
+    .catch(_ => 'https://loli-roxy.neocities.org/nagi-subs.jpg')
   let img = await (await fetch(pp)).buffer()
 
   // Recalculamos tamaño de grupo
