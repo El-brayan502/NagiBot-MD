@@ -39,7 +39,7 @@ export async function before(m, { conn }) {
       message: {
         contactMessage: {
           displayName: 'ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
-          vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta AI\nORG:Meta AI\nTEL;type=CELL;type=VOICE;waid=50231458537:+502 3145 8537\nEND:VCARD`,
+          vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ\nORG:ʙʀᴀʏᴀɴ - ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ\nTEL;type=CELL;type=VOICE;waid=50231458537:+502 3145 8537\nEND:VCARD`,
           jpegThumbnail: Buffer.from([]),
           contextInfo: {
             forwardingScore: 999,
