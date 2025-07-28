@@ -1,94 +1,58 @@
-import fetch from 'node-fetch'
+//▪CÓDIGO BY DEVBRAYAN PRROS XD▪
+//▪ROXY BOT MD▪
 
-export async function before(m, { conn, participants, groupMetadata }) {
-  // Solo grupos y stub events
-  if (!m.messageStubType || !m.isGroup) return true
+export async function before(m, { conn }) {
+  if (!m.isGroup || !m.messageStubType || !m.messageStubParameters) return;
 
-  // Constantes de stub
-  const ADDED   = 27
-  const REMOVED = 28
-  const DEMOTED = 32
+  // ← Esta línea verifica si la bienvenida está activada
+  if (!db.data.chats[m.chat].welcome) return;
 
-  const stub = m.messageStubType
-  // El JID real del usuario que entra/sale
-  const jidParam = m.messageStubParameters[0]
-  const numParam = jidParam.split('@')[0]
+  const groupMetadata = await conn.groupMetadata(m.chat);
+  const participants = m.messageStubParameters || [];
+  const date = new Date();
+  const fecha = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
-  // Preparamos el contacto para quotear
-  const fkontak = {
-    key: {
-      participants: "0@s.whatsapp.net",
-      remoteJid: "status@broadcast",
-      fromMe: false,
-      id: "Halo"
-    },
-    message: {
-      contactMessage: {
-        vcard:
-          `BEGIN:VCARD\n` +
-          `VERSION:3.0\n` +
-          `N:Sy;Bot;;;\n` +
-          `FN:y\n` +
-          `item1.TEL;waid=${numParam}:${numParam}\n` +
-          `item1.X-ABLabel:Ponsel\n` +
-          `END:VCARD`
-      }
-    },
-    participant: "0@s.whatsapp.net"
+  for (const user of participants) {
+    let name = await conn.getName(user);
+    let pp = await conn.profilePictureUrl(user, 'image').catch(() =>
+      'https://loli-roxy.neocities.org/nagi-subs.jpg'
+    );
+    const taguser = '@' + user.split('@')[0];
+
+    // BIENVENIDA
+    if (m.messageStubType === 27 || m.messageStubType === 31) {
+      await conn.sendMessage(m.chat, {
+        text: `👋 ¡Bienvenido ${taguser} al grupo *${groupMetadata.subject}*!\n\n🧑 Nombre: *${name}*\n📱 ID: ${user}\n📆 Fecha: ${fecha}\n\nPor favor, lee las reglas y disfruta tu estadía.`,
+        mentions: [user],
+        contextInfo: {
+          externalAdReply: {
+            title: `Nuevo miembro del grupo`,
+            body: `${name} se ha unido 🥳`,
+            thumbnailUrl: pp,
+            mediaType: 1,
+            renderLargerThumbnail: true,
+            sourceUrl: pp
+          }
+        }
+      });
+    }
+
+    // DESPEDIDA
+    if (m.messageStubType === 28 || m.messageStubType === 32) {
+      await conn.sendMessage(m.chat, {
+        text: `👋 ${taguser} ha salido del grupo *${groupMetadata.subject}*.\n\n🧑 Nombre: *${name}*\n📱 ID: ${user}\n📆 Fecha: ${fecha}\n\n¡Buena suerte en tu camino!`,
+        mentions: [user],
+        contextInfo: {
+          externalAdReply: {
+            title: `Miembro salió del grupo`,
+            body: `${name} se fue ❌`,
+            thumbnailUrl: pp,
+            mediaType: 1,
+            renderLargerThumbnail: true,
+            sourceUrl: pp
+          }
+        }
+      });
+    }
   }
-
-  // Foto de perfil del que entra/sale
-  let pp = await conn.profilePictureUrl(jidParam, 'image')
-    .catch(_ => 'https://loli-roxy.neocities.org/nagi-subs.jpg')
-  let img = await (await fetch(pp)).buffer()
-
-  // Recalculamos tamaño de grupo
-  let groupSize = participants.length
-  if (stub === ADDED)   groupSize++
-  if (stub === REMOVED || stub === DEMOTED) groupSize--
-
-  // Solo si está activada la bienvenida
-  let chat = global.db.data.chats[m.chat]
-  if (!chat.welcome) return true
-
-  // Bienvenida
-  if (stub === ADDED) {
-    const title = 'ゲ◜៹ New Member ៹◞ゲ'
-    const text  =
-      `👋 Hasta pronto, no te extrañaremos XD!!*\n*━━━━━━━━━━━━━━━━*\n\n🐢 *• Nombre:* @${numParam}\n🎋 *• Bio:* https://loli-roxy.neocities.org/\n🕒 *• Grupo:* _${groupMetadata.subject}_ \n🗓️ *• Fecha:* ${fecha}\n\n- *Salúdame a Maradona bro* -`
-    await conn.sendMini(
-      m.chat,
-      title,
-      dev,
-      text,
-      img,
-      img,
-      redes,
-      fkontak
-    )
-  }
-
-  // Despedida
-  if (stub === REMOVED || stub === DEMOTED) {
-    const title = 'ゲ◜៹ Bye Member ៹◞ゲ'
-    const text  =
-      `❀ *Adiós* de _${groupMetadata.subject}_\n` +
-      `✰ @${numParam}\n` +
-      `${global.welcom2}\n` +
-      `✦ Ahora somos *${groupSize}* miembros.\n` +
-      `•(=^●ω●^=)• ¡Te esperamos pronto!\n` +
-      `> ✐ Usa *#help* para ver los comandos.`
-    await conn.sendMini(
-      m.chat,
-      title,
-      dev,
-      text,
-      img,
-      img,
-      redes,
-      fkontak
-    )
-  }
-
-  return true
 }
