@@ -15,7 +15,7 @@ export async function before(m, { conn }) {
   for (const user of participants) {
     let name = await conn.getName(user);
     let pp = await conn.profilePictureUrl(user, 'image').catch(() =>
-      'https://files.cloudkuimages.guru/images/Y7PT6XwM.jpg'
+      'https://loli-roxy.neocities.org/nagi-subs.jpg'
     );
     const taguser = '@' + user.split('@')[0];
 
